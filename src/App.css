@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
-}
+/* Main nav container */
+.head {
+    display: flex; /* Aligns all direct children in a row */
+    align-items: center; /* Aligns items vertically centered */
+    justify-content: space-between; /* Evenly distributes space between children */
+    padding: 0 20px; /* Adds some padding for spacing */
+    font-size: larger;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    list-style-type: none;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Aligns list items in nav horizontally */
+  .nav_list {
+    display: flex; /* Aligns all <li> elements in a row */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Style for the nav links */
+  .nav_link {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px; /* Adds padding for clickable area */
   }
+  
+  /* Dropdown menu styles */
+  .dropdown {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Shows dropdown on hover */
+  .nav_items:hover .dropdown,
+  .nav_items_list:hover .dropdown {
+    display: block;
+  }
+  
+  .dropdown li {
+    padding: 10px;
+  }
+  
+  .dropdown li:hover {
+    background-color: rgb(126, 125, 125);
+  }
+  
+  /* Ensures dropdown is positioned correctly relative to the parent */
+  .nav_items {
+    position: relative;
+  }
+  
+  /* Aligns the "Main page" section */
+  .head > div {
+    margin-right: 20px; /* Optional spacing adjustment */
+  }
+.App{
+   
+    background-image: url("./images/2.jpg");
+    background-size: cover; /* Optional: scales the image to cover the element */
+    background-position: center; /* Optional: centers the image */
+    height: 500px;
+    background-size: 100%;
+    position: absolute; /* Make sure the element is positioned relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+}  
+.content{
+    align-items: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 200px;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(118, 78, 4);
 }
+.buy{
+    margin-right: 40px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-color:rgb(150, 145, 145);
+    border: none;
+
+
+
+}
+.rent
+{
+    margin-left: 40px;
+    width: 200px;
+    height: 30px;
+    background-color:rgb(150, 145, 145);
+
+    border-radius: 10px;
+    border: none;
+
+}
+.bike{
+    background-color:rgb(150, 145, 145);
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+
+
+}
+/* App.css */
+.rent:hover,
+.bike:hover,
+.buy:hover {
+  background-color: #625e5e;
+  border: none;
+}
+
